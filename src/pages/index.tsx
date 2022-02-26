@@ -44,6 +44,10 @@ const Home: NextPage<HomeProps> = ({ proxyList }) => {
           content="Para burlar bloqueios autoritários do Telegram você pode facilmente
           usar essa lista de proxies."
         />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_PAGE_URL}/banner.jpeg`}
+        />
       </Head>
       <Container maxW="container.xl" my={8}>
         <Heading textAlign="center" color="blue.500" mb={8}>
