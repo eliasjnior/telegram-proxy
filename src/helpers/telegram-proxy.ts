@@ -13,5 +13,5 @@ export const getTelegramProxyUrl = ({
 };
 
 export const getCountryFlag = (countryCode: string) => {
-  return `http://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`;
+  return `https://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`;
 };
