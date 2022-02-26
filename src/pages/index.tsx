@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import type { NextPage } from "next";
 import getProxyList, { Proxy } from "../services/get-proxy-list";
 import { getCountryFlag, getTelegramProxyUrl } from "../helpers/telegram-proxy";
@@ -100,13 +100,14 @@ const Home: NextPage<HomeProps> = ({ proxyList }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const proxyList = await getProxyList();
 
   return {
     props: {
       proxyList,
     },
+    revalidate: 300,
   };
 };
 
